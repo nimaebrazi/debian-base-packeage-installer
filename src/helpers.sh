@@ -30,12 +30,11 @@ update_repositories() {
 }
 
 #Make directory with checking exists or not
-#make_directory "name" "destination"
+#make_directory "name" 
 make_directory() {
      DIRECTORY="$1"
-     DESTINATION="$2"
-     if [ ! -d "${DESTIONATION}${DIRECTORY}" ];then
-        $(mkdir "${DESTINATION}${DIRECTORY}")
+     if [ ! -d "${DIRECTORY}" ];then
+        $(mkdir "${DIRECTORY}")
      fi
 }
 
