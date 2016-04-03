@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-## Files Addresses
+## Files Address
 readonly SOURCES_LIST="/etc/apt/sources.list"
 
-
+#Get sudo permission from user
 get_sudo_permission() {
     if [ "$(whoami)" != "root" ];then
         echo -e "Hi, I need sudo permission\n"
@@ -12,6 +12,8 @@ get_sudo_permission() {
     fi
 }
 
+#Run "apt-get update && apt-get upgrade"
+#About true in line 24 ==> When end "apt-get update" job, all commands after it ignored.So reason using true is continue commands
 update_repositories() {
     if [ -s $SOURCES_LIST ];then
         notification "Update Repositories...";
@@ -23,14 +25,17 @@ update_repositories() {
         warning "For more info see upgrade_programs.log\n"
 
     else 
-        notification "source.list is empty.\nplease check add repositories to install softwares."
+        notification "\"source.list\" file is empty.Please add repositories to install softwares."
     fi
 }
 
+#Make directory with checking exists or not
+#make_directory "name" "destination"
 make_directory() {
      DIRECTORY="$1"
-     if [ ! -d "../$DIRECTORY" ];then
-         $(mkdir ../${DIRECTORY})
+     DESTINATION="$2"
+     if [ ! -d "${DESTIONATION}${DIRECTORY}" ];then
+        $(mkdir "${DESTINATION}${DIRECTORY}")
      fi
 }
 

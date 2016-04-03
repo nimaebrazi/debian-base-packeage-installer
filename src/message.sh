@@ -19,23 +19,25 @@ message() {
     echo -e "\e$COLOR""$MESSAGE""\e$NO_COLOR"
 }
 
-
+#use light cyan
 notification() {
     local MESSAGE="$1"
     message "$LIGHT_CYAN" "==> $MESSAGE"
 }
 
-
+#use yello
 warning() {
     local MESSAGE="$1"
     message "$YELLO" "==> $MESSAGE"
 }
 
+#use blue
 success() {
     local MESSAGE="$1"
     message "$BLUE" "==> $MESSAGE"
 }
 
+#use light red
 error() {
     local MESSAGE="$1"
     message "$LIGHT_RED" "==> $MESSAGE"

@@ -4,6 +4,7 @@
 ## Programs List
 PROGRAMS_LIST=$(cat ../config/programs.list)
 
+#check exists package or not
 check_program_exists() {
      local PROGRAM=$1
      local EXIT_STATUS=0
@@ -18,6 +19,7 @@ check_program_exists() {
 }
 
 #call in install_all_programs
+#just send errors to error_install.log
 install_program() {
     local PROGRAM=$1
     notification "installing ${PROGRAM}..."
@@ -25,6 +27,7 @@ install_program() {
 }
 
 install_all_programs() {
+
     for program in ${PROGRAMS_LIST};do
 
         check_program_exists $program
@@ -36,7 +39,7 @@ install_all_programs() {
             warning "${program} is installed\n"
         fi
 
-        #do install when program not install
+        #install package when not installed
         if [ "$PROGRAM_EXISTS_CODE" -ne 0 ];then
             sleep 5
             install_program $program
