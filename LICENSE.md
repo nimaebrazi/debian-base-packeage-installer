@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) [2016] [Debian base installer , Debian base program installer]
+Copyright (c) [2016] [Debian base package installer , Debian base program installer]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
