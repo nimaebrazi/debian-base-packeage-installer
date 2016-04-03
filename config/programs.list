@@ -1,0 +1,15 @@
+apache2 
+apache2-doc
+mysql-server 
+libapache2-mod-auth-mysql
+php5
+php-pear 
+php5-mysql 
+php5-common 
+libapache2-mod-php5 
+php5-cli
+git
+aria2c
+sqlite3
+redis-server
+htop
