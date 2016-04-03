@@ -1,7 +1,7 @@
 # Debian Base Package Installer
 
 ###What should we do with the script?
-This scrip installs your packages and programs on debian bases linux distro.
+This script installs your packages and programs on debian bases linux distro.
 
 ###Usage
 #####Step 1:
