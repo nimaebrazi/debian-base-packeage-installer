@@ -1,5 +1,6 @@
 apache2 
 apache2-doc
+nginx
 mysql-server 
 libapache2-mod-auth-mysql
 php5

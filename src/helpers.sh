@@ -12,15 +12,21 @@ get_sudo_permission() {
     fi
 }
 
-#Run "apt-get update && apt-get upgrade"
+#Run "apt-key update apt-get update && apt-get upgrade"
 #About true in line 24 ==> When end "apt-get update" job, all commands after it ignored.So reason using true is continue commands
 update_repositories() {
     if [ -s $SOURCES_LIST ];then
-        notification "Update Repositories...";
+
+        notification "Updating Keys...";
+        sudo apt-key -y update > ../log/update_key.log 2>&1;
+        warning "For more info see update_key.log\n" &&
+
+
+        notification "Updating Repositories...";
         sudo apt-get -y update > ../log/update_repo.log 2>&1;
         warning "For more info see update_repo.log\n" &&
 
-        notification "Upgrade all programs...";
+        notification "Upgrading all programs...";
         sudo apt-get -y upgrade >  ../log/upgrade_programs 2>&1|| true;
         warning "For more info see upgrade_programs.log\n"
 
