@@ -27,7 +27,7 @@ update_repositories() {
         warning "For more info see update_repo.log\n" &&
 
         notification "Upgrading all programs...";
-        sudo apt-get -y upgrade >  ../log/upgrade_programs 2>&1|| true;
+        sudo apt-get -y upgrade >  ../log/upgrade_programs.log 2>&1|| true;
         warning "For more info see upgrade_programs.log\n"
 
     else 
