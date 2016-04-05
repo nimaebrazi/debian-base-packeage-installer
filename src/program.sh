@@ -51,7 +51,7 @@ install_all_programs() {
 
             if [ "$EXIT_STATUS" -ne '0' ];then
                 error "${program}: fail to install"
-                warning "For more info see error.log\n"
+                warning "For more info error.log\n"
             fi
         fi
 

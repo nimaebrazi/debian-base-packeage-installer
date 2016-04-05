@@ -24,11 +24,11 @@ update_repositories() {
 
         notification "Updating Repositories...";
         sudo apt-get -y update > ../log/update_repo.log 2>&1;
-        warning "For more info see update_repo.log\n" &&
+        warning "For more info update_repo.log\n" &&
 
         notification "Upgrading all programs...";
         sudo apt-get -y upgrade >  ../log/upgrade_programs.log 2>&1|| true;
-        warning "For more info see upgrade_programs.log\n"
+        warning "For more info upgrade_programs.log\n"
 
     else 
         notification "\"source.list\" file is empty.Please add repositories to install softwares."
