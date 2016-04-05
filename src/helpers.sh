@@ -13,7 +13,9 @@ get_sudo_permission() {
 }
 
 #Run "apt-key update apt-get update && apt-get upgrade"
-#About true in line 24 ==> When end "apt-get update" job, all commands after it ignored.So reason using true is continue commands
+
+#About true in line 32: 
+#==> When end "apt-get update" job, all commands after it ignored.So reason using true is continue commands
 update_repositories() {
     if [ -s $SOURCES_LIST ];then
 
