@@ -1,0 +1,6 @@
+{
+  "name": "Debian Base Packeage Installer",
+  "tagline": "Install easily debian packages on your linux debian base distro",
+  "body": "# Debian Base Package Installer\r\n\r\n###Description\r\nThis script installs your packages and programs on debian bases linux distro.\r\n\r\n###Usage\r\n#####Step 1:\r\n>[Download](https://github.com/nimaebrazi/debian-base-packeage-installer/archive/master.zip) zip file from github\r\n\r\nor clone from github:\r\n```bash\r\ngit clone https://github.com/nimaebrazi/debian-base-packeage-installer.git\r\n```\r\n#####Step 2:\r\nAdd your package(s) to `config/programs.list`. Every package must be in one line.\r\nSample: \r\n````\r\napache2 \r\napache2-doc\r\nmysql-server \r\nlibapache2-mod-auth-mysql\r\nphp5\r\n.\r\n.\r\n.\r\n```\r\n\r\n#####Step 3:\r\nchange directory to `src`:\r\n```\r\ncd src/\r\n```\r\n>Note: All \r\n**_.sh_** \r\nfiles must be executable:\r\n```\r\nsudo chmod +x *.sh\r\n```\r\n\r\n#####Step 4:\r\nJust run `main.sh` in `src` directory\r\n```\r\nbash main.sh\r\n```\r\nor\r\n\r\n```\r\n./main.sh\r\n```\r\n\r\n###License\r\n####[MIT License] (https://github.com/nimaebrazi/DebianBaseInstaller/blob/master/LICENSE.md)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
