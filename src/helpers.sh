@@ -18,7 +18,7 @@ update_repositories() {
     if [ -s $SOURCES_LIST ];then
 
         notification "Updating Keys...";
-        sudo apt-key -y update > ../log/update_key.log 2>&1;
+        sudo apt-key update > ../log/update_key.log 2>&1;
         warning "For more info see update_key.log\n" &&
 
 
