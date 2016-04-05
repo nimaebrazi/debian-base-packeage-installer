@@ -23,7 +23,7 @@ check_program_exists() {
 install_program() {
     local PROGRAM=$1
     notification "installing ${PROGRAM}..."
-    sudo apt-get -y install ${PROGRAM} 2>../log/error_install.log
+    sudo apt-get -y install ${PROGRAM} 2>>../log/error_install.log
 }
 
 install_all_programs() {
