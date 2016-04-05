@@ -5,11 +5,11 @@ This script installs your packages and programs on debian bases linux distro.
 
 ###Usage
 #####Step 1:
->[Download](https://github.com/nimaebrazi/DebianBaseInstaller) zip file from github
+>[Download](https://github.com/nimaebrazi/debian-base-packeage-installer/archive/master.zip) zip file from github
 
 or clone from github:
 ```bash
-git clone https://github.com/nimaebrazi/DebianBaseInstaller.git
+git clone https://github.com/nimaebrazi/debian-base-packeage-installer.git
 ```
 #####Step 2:
 Add your package(s) to `config/programs.list`. Every package must be in one line.
