@@ -8,8 +8,8 @@
 #######################################################
 
 source message.sh
-source program.sh
 source helpers.sh
+source program.sh
 
 
 #######################################################

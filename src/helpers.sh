@@ -23,14 +23,17 @@ update_repositories() {
         sudo apt-key update > ../log/update_key.log 2>&1;
         warning "For more info see update_key.log\n" &&
 
-
         notification "Updating Repositories...";
         sudo apt-get -y update > ../log/update_repo.log 2>&1;
         warning "For more info update_repo.log\n" &&
 
-        notification "Upgrading all programs...";
-        sudo apt-get -y upgrade >  ../log/upgrade_programs.log 2>&1|| true;
-        warning "For more info upgrade_programs.log\n"
+        question "Do you want upgrade your packages? (y/n)"
+        read ANSWER
+        if [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "y" ];then
+            notification "Upgrading all programs...";
+            sudo apt-get -y upgrade >  ../log/upgrade_programs.log 2>&1|| true;
+            warning "For more info upgrade_programs.log\n"
+        fi
 
     else 
         notification "\"source.list\" file is empty.Please add repositories to install softwares."

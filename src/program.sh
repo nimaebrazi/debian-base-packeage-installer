@@ -46,7 +46,7 @@ install_all_programs() {
             local EXIT_STATUS="$?"
             
             if [ "$EXIT_STATUS" -eq '0' ];then
-                success "${program}: install successfully"
+                success "${program}: install successfully\n"
             fi
 
             if [ "$EXIT_STATUS" -ne '0' ];then
